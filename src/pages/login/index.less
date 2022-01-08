@@ -1,0 +1,100 @@
+@import "../../style/common.less";
+
+.login-box {
+    display: block;
+    position: relative;
+    height: 100%;
+    background-color: @cd2;
+
+    @w:900px;
+    @h:500px;
+    
+    .login-content {
+        display: flex;
+        position: absolute;
+        width: @w;
+        height: @h;
+        top: 50%;
+        left: 50%;
+        margin: -(@h / 2) 0 0 -(@w / 2);
+        background-color: @cff;
+
+        .ant-spin-nested-loading {
+            width: 100%;
+            height: 100%;
+
+            .ant-spin-container {
+                display: flex;
+                height: 100%;
+            }
+        }
+
+        .left {
+            flex: 0 0 350px;
+            background-color: @c68;
+            border-right: 1px solid #ddd;
+            background: url('../../images/loginPic.jpg') center center / 100% 100% no-repeat;
+        }
+
+        .right {
+            flex: 1;
+            padding: 0 100px;
+        }
+    }
+}
+
+.login-content .right {
+    .title,
+    .stitle{
+        font-size: 1rem;
+        color: @c68;
+        font-weight: 700px;
+        text-align: center;
+        display: block;
+    }
+    .title{
+        padding-top: 80px;
+        font-size: 1.1rem;
+    }
+    .input {
+        display: block;
+        margin-top: 30px;
+        > span {
+            display: block;
+            font-size: .7rem;
+            color: @c68;
+            line-height: 24px;
+        }
+        > input {
+            display: block;
+            width: 100%;
+            padding: 4px 12px;
+            font-size: .75rem;
+            color: @c33;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #ddd;
+        }
+    }
+    .checkbox {
+        margin: 15px 0 30px 0;
+    }
+
+    @h:34px;
+
+    .login-btn {
+        display: block;
+        text-align: center;
+        width: 200px;
+        height: @h;
+        margin: auto;
+        line-height: 32px;
+        border: 1px solid @c68;
+        background-color: @c68;
+        font-size: .8rem;
+        border-radius: (@h /2);
+        color: @cff;
+        .touch();
+        box-shadow: 0 2px 20px rgba(103,164,216,.8);
+    }
+}

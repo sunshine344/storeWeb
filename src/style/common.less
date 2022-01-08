@@ -1,0 +1,27 @@
+/* 颜色变量定义 -- start --  */
+
+@primary:pink;
+@cd2:#d2ebff;
+@c68:#68a4d8;
+@cff:#fff;
+@c33:#333;
+/* 颜色变量定义 -- end --  */
+
+/* 方法定义 -- start --  */
+// 清除浮动
+.clear() {
+    &::after {
+        content:'';
+        display: block;
+        height: 0;
+        clear: both;
+        width: 0;
+    }
+}
+// 点击样式
+.touch() {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    cursor: pointer;
+}
+/* 方法定义 -- end --  */
